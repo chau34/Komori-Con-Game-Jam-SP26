@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://doml6vh81ikw"]
+[gd_scene load_steps=10 format=4 uid="uid://doml6vh81ikw"]
 
 [ext_resource type="PackedScene" uid="uid://scl87x5fxssp" path="res://scenes/Cat.tscn" id="1_bfmfj"]
 [ext_resource type="Script" uid="uid://ckleod0s0gkie" path="res://scripts/House.gd" id="1_ispqn"]
 [ext_resource type="Texture2D" uid="uid://cyypj641bqk2h" path="res://assets/IMG_0877.JPG" id="1_r2usd"]
 [ext_resource type="Texture2D" uid="uid://bnokdu4wo70xj" path="res://assets/transparent.png" id="3_ispqn"]
+[ext_resource type="FontFile" uid="uid://b3jvctlfh7l8i" path="res://themes/fonts/fonts/poco/Poco.ttf" id="5_etd6b"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bfmfj"]
 
@@ -17,6 +18,8 @@ texture_region_size = Vector2i(8, 8)
 tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_r2usd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etd6b"]
 
 [node name="House" type="Node2D"]
 script = ExtResource("1_ispqn")
@@ -55,38 +58,39 @@ anchor_bottom = 1.0
 offset_top = -160.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_etd6b")
+
+[node name="Portrait" type="TextureRect" parent="DialogueLayer/DialoguePanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch_mode = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="DialogueLayer/DialoguePanel"]
 layout_mode = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="DialogueLayer/DialoguePanel/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="Portrait" type="TextureRect" parent="DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="VBoxContainer" type="VBoxContainer" parent="DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="SpeakerLabel" type="Label" parent="DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueLayer/DialoguePanel/MarginContainer"]
 layout_mode = 2
 
-[node name="DialogueLabel" type="RichTextLabel" parent="DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="SpeakerLabel" type="Label" parent="DialogueLayer/DialoguePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="DialogueLabel" type="RichTextLabel" parent="DialogueLayer/DialoguePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_etd6b")
+bbcode_enabled = true
 fit_content = true
 scroll_active = false
 autowrap_mode = 2
 horizontal_alignment = 3
 vertical_alignment = 3
 
-[node name="HintLabel" type="Label" parent="DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="HintLabel" type="Label" parent="DialogueLayer/DialoguePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogueLayer/DialoguePanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16

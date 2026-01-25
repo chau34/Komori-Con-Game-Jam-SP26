@@ -3,10 +3,10 @@ extends Node2D
 
 @onready var dialogue_layer: CanvasLayer = $DialogueLayer
 
-@onready var portrait: TextureRect = $DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/Portrait
-@onready var speaker_label: Label = $DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/VBoxContainer/SpeakerLabel
-@onready var dialogue_label: RichTextLabel = $DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/VBoxContainer/DialogueLabel
-@onready var hint_label: Label = $DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/VBoxContainer/HintLabel
+@onready var portrait: TextureRect = $DialogueLayer/DialoguePanel/Portrait
+@onready var speaker_label: Label = $DialogueLayer/DialoguePanel/MarginContainer/VBoxContainer/SpeakerLabel
+@onready var dialogue_label: RichTextLabel = $DialogueLayer/DialoguePanel/MarginContainer/VBoxContainer/DialogueLabel
+@onready var hint_label: Label = $DialogueLayer/DialoguePanel/MarginContainer/VBoxContainer/HintLabel
 
 const CAT_PORTRAIT: Texture2D = preload("res://assets/cat-dialogue.png")
 const OWNER_PORTRAIT: Texture2D = preload("res://assets/human-dialogue.png")
@@ -54,7 +54,7 @@ func _show_line() -> void:
 	var who := str(entry["speaker"])
 
 	speaker_label.text = who
-	dialogue_label.text = str(entry["text"])
+	dialogue_label.bbcode_text = "[left]" + str(entry["text"]) + "[/left]"
 	hint_label.text = "Press Space to continue"
 
 	match who:
