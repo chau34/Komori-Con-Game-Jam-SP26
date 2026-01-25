@@ -1,23 +1,40 @@
+# res://scripts/House.gd
 extends Node2D
 
 @onready var dialogue_layer: CanvasLayer = $DialogueLayer
-@onready var speaker_label: Label = $DialogueLayer/DialoguePanel/VBoxContainer/SpeakerLabel
-@onready var dialogue_label: Label = $DialogueLayer/DialoguePanel/VBoxContainer/DialogueLabel
-@onready var hint_label: Label = $DialogueLayer/DialoguePanel/VBoxContainer/HintLabel
 
-var dialogue := [
+@onready var portrait: TextureRect = $DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/Portrait
+@onready var speaker_label: Label = $DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/VBoxContainer/SpeakerLabel
+@onready var dialogue_label: RichTextLabel = $DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/VBoxContainer/DialogueLabel
+@onready var hint_label: Label = $DialogueLayer/DialoguePanel/MarginContainer/HBoxContainer/VBoxContainer/HintLabel
+
+const CAT_PORTRAIT: Texture2D = preload("res://assets/cat-dialogue.png")
+const OWNER_PORTRAIT: Texture2D = preload("res://assets/human-dialogue.png")
+
+var lines := [
 	{"speaker": "Cat", "text": "I must warn my owner!"},
 	{"speaker": "Cat", "text": "*cat runs up to owner*"},
 	{"speaker": "Cat", "text": "Meowwww, Meow Meow Meowww"},
 	{"speaker": "Owner", "text": "Does she want something?\nDo you need something?"},
-	{"speaker": "Cat", "text": "He can't understand me.\nI'll have to find another way to stop him..."}
+	{"speaker": "Cat", "text": "He can't understand me, I'll have to find another way to stop him..."}
 ]
 
-var idx := 0
-var in_dialogue := true
+var idx: int = 0
+var in_dialogue: bool = true
 
 func _ready() -> void:
+	if portrait == null or speaker_label == null or dialogue_label == null or hint_label == null:
+		push_error("Dialogue UI nodes not found. Fix node paths in House.gd using Copy Node Path.")
+		return
+
 	_start_dialogue()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not in_dialogue:
+		return
+
+	if event.is_action_pressed("confirm") or event.is_action_pressed("ui_accept"):
+		_next_line()
 
 func _start_dialogue() -> void:
 	in_dialogue = true
@@ -25,25 +42,29 @@ func _start_dialogue() -> void:
 	dialogue_layer.visible = true
 	_show_line()
 
-func _unhandled_input(event: InputEvent) -> void:
-	if not in_dialogue:
-		return
-
-	if event.is_action_pressed("confirm") or event.is_action_pressed("ui_accept"):
-		idx += 1
-		if idx >= dialogue.size():
-			_end_dialogue()
-		else:
-			_show_line()
+func _next_line() -> void:
+	idx += 1
+	if idx >= lines.size():
+		_end_dialogue()
+	else:
+		_show_line()
 
 func _show_line() -> void:
-	var entry = dialogue[idx]
-	speaker_label.text = str(entry["speaker"])
+	var entry = lines[idx]
+	var who := str(entry["speaker"])
+
+	speaker_label.text = who
 	dialogue_label.text = str(entry["text"])
 	hint_label.text = "Press Space to continue"
+
+	match who:
+		"Cat":
+			portrait.texture = CAT_PORTRAIT
+		"Owner":
+			portrait.texture = OWNER_PORTRAIT
+		_:
+			portrait.texture = null
 
 func _end_dialogue() -> void:
 	in_dialogue = false
 	dialogue_layer.visible = false
-	# After dialogue ends, gameplay continues (cat can move/interact)
-	# If you want: GameState.last_message = "Find a way to stop him..."

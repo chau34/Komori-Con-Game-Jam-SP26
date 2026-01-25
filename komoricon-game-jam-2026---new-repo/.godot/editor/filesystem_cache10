@@ -1,11 +1,13 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1769322377
+::res://::1769328663
 icon.svg::CompressedTexture2D::2046695202096488833::1769322262::1769322387::1::::<><><>0<>0<>3da6e96c367b38aa45cf565fd78927e4<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://animations/::1769322262
-cat_animation.tres::SpriteFrames::137992648864737074::1769322262::0::1::::<><><>0<>0<><>::uid://uqswab360u1g::::res://assets/sprite_sheet.png
+::res://animations/::1769328487
+cat_animation.tres::SpriteFrames::137992648864737074::1769328487::0::1::::<><><>0<>0<><>::uid://uqswab360u1g::::res://assets/sprite_sheet.png
 cat_idle.tres::SpriteFrames::3557627207808183792::1769322262::0::1::::<><><>0<>0<><>::uid://uqswab360u1g::::res://assets/sprite_sheet.png
-::res://assets/::1769322262
+::res://assets/::1769328436
 black screen.png::CompressedTexture2D::5011732329442231462::1769322262::1769322387::1::::<><><>0<>0<>532fcd59383651a81cd2210cfafc455e<>res://.godot/imported/black screen.png-67a59ceee144461dc144fcdf0bfa842e.ctex::
+cat-dialogue.png::CompressedTexture2D::5475720984441410737::1769327994::1769328003::1::::<><><>0<>0<>fe9abdb50a4c37437909ecebbd4172a1<>res://.godot/imported/cat-dialogue.png-097c0fcbdaadce502ed616b334efd7ca.ctex::
+human-dialogue.png::CompressedTexture2D::3255561032159247133::1769327988::1769328436::1::::<><><>0<>0<>ce192f0e1a71e5f3251d727de82ed6d7<>res://.godot/imported/human-dialogue.png-e1286683724f180c8042b7764728fb0b.ctex::
 IMG_0859.JPG::CompressedTexture2D::8578734405862913318::1769322262::1769322387::1::::<><><>0<>0<>127cabb698caff4bfc80ab6fee27d20f<>res://.godot/imported/IMG_0859.JPG-1e129b7ff59f8485de0eb65a6dc01682.ctex::
 IMG_0863.PNG::CompressedTexture2D::4202878559166736399::1769322262::1769322387::1::::<><><>0<>0<>f1356baac7f58e6ecbb5def29f252229<>res://.godot/imported/IMG_0863.PNG-9e653d2819a1fbc974fd6af3721826a9.ctex::
 IMG_0865.PNG::CompressedTexture2D::6781274748348542836::1769322262::1769322387::1::::<><><>0<>0<>ac48246c974960d2d2e6b579a4442829<>res://.godot/imported/IMG_0865.PNG-1d2117533866fcd72be32b40b99dff4d.ctex::
@@ -15,29 +17,29 @@ IMG_0871.PNG::CompressedTexture2D::3424317294107921242::1769322262::1769322387::
 IMG_0877.JPG::CompressedTexture2D::6507847182039536213::1769322262::1769322387::1::::<><><>0<>0<>d5053837ac4f2ee025479d8abf7034b8<>res://.godot/imported/IMG_0877.JPG-0ce6473b07ef44db3a1cdb927f0075e6.ctex::
 sprite_sheet.png::CompressedTexture2D::1437939113020737474::1769322262::1769322387::1::::<><><>0<>0<>01d24b4d0a5a19c4638a9df988fc0e7b<>res://.godot/imported/sprite_sheet.png-e5166308e47c800b8726fe291577f49d.ctex::
 transparent.png::CompressedTexture2D::3328390563139644635::1769322262::1769322387::1::::<><><>0<>0<>46479f8d7ca97d9ddd325fea43596301<>res://.godot/imported/transparent.png-8e8bc518df69b3fa6c3ec8069dac6941.ctex::
-::res://scenes/::1769322262
+::res://scenes/::1769328663
 Cat.tscn::PackedScene::1268256476760371139::1769322262::0::1::::<><><>0<>0<><>::uid://dkc5qghw86ft3::::res://scripts/Cat.gd<>uid://b73yo5mv73so::::res://animations/cat_animation.tres
-House.tscn::PackedScene::240217728145011210::1769322262::0::1::::<><><>0<>0<><>::uid://scl87x5fxssp::::res://scenes/Cat.tscn<>uid://cyypj641bqk2h::::res://assets/IMG_0877.JPG<>uid://bnokdu4wo70xj::::res://assets/transparent.png
+House.tscn::PackedScene::240217728145011210::1769328487::0::1::::<><><>0<>0<><>::uid://scl87x5fxssp::::res://scenes/Cat.tscn<>uid://cyypj641bqk2h::::res://assets/IMG_0877.JPG<>uid://bnokdu4wo70xj::::res://assets/transparent.png
 Interactable.tscn::PackedScene::4729363560666330202::1769322262::0::1::::<><><>0<>0<><>::
-Intro.tscn::PackedScene::8797153307015627376::1769322262::0::1::::<><><>0<>0<><>::uid://cximk2ad318q8::::res://themes/menu_theme.tres<>uid://b3jvctlfh7l8i::::res://themes/fonts/fonts/poco/Poco.ttf<>uid://d0ss8jnn33sgf::::res://scripts/Intro.gd<>uid://bgfum7l3ldxqe::::res://themes/button.tres<>uid://cdnyq8eh61lgo::::res://assets/black screen.png<>uid://b73yo5mv73so::::res://animations/cat_animation.tres
+Intro.tscn::PackedScene::8797153307015627376::1769326584::0::1::::<><><>0<>0<><>::uid://cximk2ad318q8::::res://themes/menu_theme.tres<>uid://b3jvctlfh7l8i::::res://themes/fonts/fonts/poco/Poco.ttf<>uid://d0ss8jnn33sgf::::res://scripts/Intro.gd<>uid://bgfum7l3ldxqe::::res://themes/button.tres<>uid://cdnyq8eh61lgo::::res://assets/black screen.png<>uid://b73yo5mv73so::::res://animations/cat_animation.tres
 Main.tscn::PackedScene::7886711270076073790::1769322262::0::1::::<><><>0<>0<><>::
-UI.tscn::PackedScene::5116772053228309041::1769322262::0::1::::<><><>0<>0<><>::uid://dsod67vrim74e::::res://scripts/UI.gd
-::res://scripts/::1769322262
+UI.tscn::PackedScene::5116772053228309041::1769325017::0::1::::<><><>0<>0<><>::uid://dsod67vrim74e::::res://scripts/UI.gd
+::res://scripts/::1769328663
 Cat.gd::GDScript::7867129652451853886::1769322262::0::1::::<>CharacterBody2D<><>0<>0<><>::
 GameState.gd::GDScript::9136513169566791085::1769322262::0::1::::<>Node<><>0<>0<><>::
-House.gd::GDScript::4584129808537302218::1769322262::0::1::::<>Node2D<><>0<>0<><>::
+House (2).gd::GDScript::5497706025188572412::1769328646::0::1::::<>Node2D<><>0<>0<><>::
 Interactable.gd::GDScript::525818625705341035::1769322262::0::1::::<>Area2D<><>0<>0<><>::
-Intro.gd::GDScript::8952294272093654809::1769322262::0::1::::<>Control<><>0<>0<><>::
+Intro.gd::GDScript::8952294272093654809::1769327735::0::1::::<>Control<><>0<>0<><>::
 UI.gd::GDScript::8451801749681773982::1769322262::0::1::::<>CanvasLayer<><>0<>0<><>::
-::res://themes/::1769322262
+::res://themes/::1769326441
 button.tres::StyleBoxFlat::2819113102700872072::1769322262::0::1::::<><><>0<>0<><>::
-menu_theme.tres::StyleBoxFlat::6404447673250909877::1769322262::0::1::::<><><>0<>0<><>::
-::res://themes/fonts/::1769322262
+menu_theme.tres::StyleBoxFlat::6404447673250909877::1769326441::0::1::::<><><>0<>0<><>::
+::res://themes/fonts/::1769322387
 icon.png::CompressedTexture2D::6669618444143786095::1769322262::1769322387::1::::<><><>0<>0<>9fc09fa8f5d196f6399c4788ea180152<>res://.godot/imported/icon.png-d17f3b8bd244d20036dfb6dba9483502.ctex::
 README.md::TextFile::-1::1769322262::0::1::::<><><>0<>0<><>::
-::res://themes/fonts/fonts/::1769322262
+::res://themes/fonts/fonts/::1769322387
 overview.PNG::CompressedTexture2D::5571963386414621080::1769322262::1769322387::1::::<><><>0<>0<>4097567a5edaa497bb495b23ac9113e1<>res://.godot/imported/overview.PNG-1e0dbc7acea62c9bef1c1f5cd030d651.ctex::
-::res://themes/fonts/fonts/poco/::1769322262
+::res://themes/fonts/fonts/poco/::1769322387
 CC BY 4.0.txt::TextFile::-1::1769322262::0::1::::<><><>0<>0<><>::
 Poco.tres::FontFile::-1::1769322262::0::1::::<><><>0<>0<><>::res://fonts/poco/Poco.ttf
 Poco.ttf::FontFile::4371567348954755686::1769322262::1769322387::1::::<><><>0<>0<>a83688f6c0c769ce8819dba457ce6e5c<>res://.godot/imported/Poco.ttf-e095a780b38802b42fbaa2bb9dfccdbd.fontdata::

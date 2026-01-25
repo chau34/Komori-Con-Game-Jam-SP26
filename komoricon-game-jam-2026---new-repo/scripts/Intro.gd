@@ -40,7 +40,7 @@ func _run_cinematic() -> void:
 	_set_line("A car is speeding down an unknown road,\nwith no goal to stop.")
 	await _pause(1.6 + EXTRA_DELAY)
 
-	_set_line("A familiar face walks outside of his home,\nand crosses the road to get to his car at 9:00 PM.")
+	_set_line("A familiar face leaves his home,\nand crosses the road to get to his car at 9:00 PM.")
 	await _pause(2.2 + EXTRA_DELAY)
 
 	_set_line("As he crosses the road,\nthe zooming car appears from nowhere and...")

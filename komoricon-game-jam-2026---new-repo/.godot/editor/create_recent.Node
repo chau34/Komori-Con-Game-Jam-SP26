@@ -1,5 +1,8 @@
+RichTextLabel
+MarginContainer
+HBoxContainer
+TextureRect
 Label
 VBoxContainer
 PanelContainer
 CanvasLayer
-RichTextLabel
