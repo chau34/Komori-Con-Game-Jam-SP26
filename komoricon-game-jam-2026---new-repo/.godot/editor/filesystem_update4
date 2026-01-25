@@ -1,3 +1,4 @@
 res://scenes/House.tscn
 res://animations/cat_animation.tres
 res://scripts/House.gd
+res://scenes/Intro.tscn

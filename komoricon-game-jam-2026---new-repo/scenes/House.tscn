@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://doml6vh81ikw"]
+[gd_scene load_steps=11 format=4 uid="uid://doml6vh81ikw"]
 
 [ext_resource type="PackedScene" uid="uid://scl87x5fxssp" path="res://scenes/Cat.tscn" id="1_bfmfj"]
 [ext_resource type="Script" uid="uid://ckleod0s0gkie" path="res://scripts/House.gd" id="1_ispqn"]
 [ext_resource type="Texture2D" uid="uid://cyypj641bqk2h" path="res://assets/IMG_0877.JPG" id="1_r2usd"]
 [ext_resource type="Texture2D" uid="uid://bnokdu4wo70xj" path="res://assets/transparent.png" id="3_ispqn"]
 [ext_resource type="FontFile" uid="uid://b3jvctlfh7l8i" path="res://themes/fonts/fonts/poco/Poco.ttf" id="5_etd6b"]
+[ext_resource type="AudioStream" uid="uid://dulartb7cr85v" path="res://music/House.ogg" id="6_lr155"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bfmfj"]
 
@@ -94,3 +95,7 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="DialogueLayer/DialoguePanel/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 16
+
+[node name="House" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_lr155")
+autoplay = true

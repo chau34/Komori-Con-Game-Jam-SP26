@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxln3hd80y57i"]
+[gd_scene load_steps=13 format=3 uid="uid://dxln3hd80y57i"]
 
 [ext_resource type="StyleBox" uid="uid://cximk2ad318q8" path="res://themes/menu_theme.tres" id="1_45dpb"]
 [ext_resource type="FontFile" uid="uid://b3jvctlfh7l8i" path="res://themes/fonts/fonts/poco/Poco.ttf" id="1_aqbct"]
@@ -6,6 +6,7 @@
 [ext_resource type="StyleBox" uid="uid://bgfum7l3ldxqe" path="res://themes/button.tres" id="1_hc7eg"]
 [ext_resource type="Texture2D" uid="uid://cdnyq8eh61lgo" path="res://assets/black screen.png" id="1_ywiat"]
 [ext_resource type="SpriteFrames" uid="uid://b73yo5mv73so" path="res://animations/cat_animation.tres" id="6_capyo"]
+[ext_resource type="AudioStream" uid="uid://cxl2cxs5uhbcy" path="res://music/Main menu.ogg" id="7_b2a04"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45dpb"]
 content_margin_left = 10.0
@@ -103,6 +104,10 @@ offset_bottom = 505.0
 theme = SubResource("Theme_capyo")
 theme_override_fonts/font = ExtResource("1_aqbct")
 autowrap_mode = 2
+
+[node name="MainMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_b2a04")
+autoplay = true
 
 [connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Exit Button" to="." method="_on_exit_button_pressed"]
