@@ -37,3 +37,7 @@ offset_left = 88.0
 offset_top = 42.0
 offset_right = 92.0
 offset_bottom = 69.0
+
+[node name="MessageLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

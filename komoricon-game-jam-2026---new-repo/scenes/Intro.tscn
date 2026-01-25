@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dxln3hd80y57i"]
+[gd_scene load_steps=12 format=3 uid="uid://dxln3hd80y57i"]
 
 [ext_resource type="StyleBox" uid="uid://cximk2ad318q8" path="res://themes/menu_theme.tres" id="1_45dpb"]
 [ext_resource type="FontFile" uid="uid://b3jvctlfh7l8i" path="res://themes/fonts/fonts/poco/Poco.ttf" id="1_aqbct"]
@@ -40,6 +40,8 @@ PanelContainer/styles/panel = ExtResource("1_45dpb")
 VBoxContainer/constants/separation = 20
 
 [sub_resource type="Theme" id="Theme_hc7eg"]
+
+[sub_resource type="Theme" id="Theme_capyo"]
 
 [node name="Intro" type="Control"]
 layout_mode = 3
@@ -91,6 +93,16 @@ scale = Vector2(8, 8)
 sprite_frames = ExtResource("6_capyo")
 autoplay = "default"
 frame_progress = 0.7150222
+
+[node name="CinematicLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 430.0
+offset_right = 451.0
+offset_bottom = 505.0
+theme = SubResource("Theme_capyo")
+theme_override_fonts/font = ExtResource("1_aqbct")
+autowrap_mode = 2
 
 [connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Exit Button" to="." method="_on_exit_button_pressed"]
