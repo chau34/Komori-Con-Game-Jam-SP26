@@ -1,0 +1,96 @@
+[gd_scene load_steps=11 format=3 uid="uid://dxln3hd80y57i"]
+
+[ext_resource type="StyleBox" uid="uid://cximk2ad318q8" path="res://themes/menu_theme.tres" id="1_45dpb"]
+[ext_resource type="FontFile" uid="uid://b3jvctlfh7l8i" path="res://themes/fonts/fonts/poco/Poco.ttf" id="1_aqbct"]
+[ext_resource type="Script" uid="uid://d0ss8jnn33sgf" path="res://scripts/Intro.gd" id="1_capyo"]
+[ext_resource type="StyleBox" uid="uid://bgfum7l3ldxqe" path="res://themes/button.tres" id="1_hc7eg"]
+[ext_resource type="Texture2D" uid="uid://cdnyq8eh61lgo" path="res://assets/black screen.png" id="1_ywiat"]
+[ext_resource type="SpriteFrames" uid="uid://b73yo5mv73so" path="res://animations/cat_animation.tres" id="6_capyo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45dpb"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 15.0
+bg_color = Color(0.80831176, 0.4859162, 0.61074007, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hc7eg"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 15.0
+bg_color = Color(0.73465, 0.08919742, 0.34527415, 1)
+
+[sub_resource type="Theme" id="Theme_45dpb"]
+Button/constants/h_separation = 4
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_aqbct")
+Button/styles/hover = ExtResource("1_hc7eg")
+Button/styles/normal = SubResource("StyleBoxFlat_45dpb")
+Button/styles/pressed = SubResource("StyleBoxFlat_hc7eg")
+PanelContainer/styles/panel = ExtResource("1_45dpb")
+VBoxContainer/constants/separation = 20
+
+[sub_resource type="Theme" id="Theme_hc7eg"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_capyo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1024.0
+offset_bottom = 1024.0
+texture = ExtResource("1_ywiat")
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 351.0
+offset_right = 477.0
+offset_bottom = 583.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = SubResource("Theme_45dpb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_hc7eg")
+
+[node name="Start Button" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="Exit Button" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(327, 255)
+scale = Vector2(8, 8)
+sprite_frames = ExtResource("6_capyo")
+autoplay = "default"
+frame_progress = 0.7150222
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Exit Button" to="." method="_on_exit_button_pressed"]
