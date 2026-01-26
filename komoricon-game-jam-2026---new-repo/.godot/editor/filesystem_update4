@@ -1,0 +1,5 @@
+res://scripts/Cat.gd
+res://scenes/House.tscn
+res://animations/cat_animation.tres
+res://scenes/End.tscn
+res://scenes/HouseAfterParkour.tscn

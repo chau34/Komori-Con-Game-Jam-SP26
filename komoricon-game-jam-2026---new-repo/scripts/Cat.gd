@@ -28,3 +28,12 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 
 	move_and_slide()
+
+func _on_parkour_body_entered(body: Node2D) -> void:
+	if body == self:
+		get_tree().change_scene_to_file("res://scenes/Parkour.tscn")
+
+
+func _on_fight_body_entered(body: Node2D) -> void:
+	if body == self:
+		get_tree().change_scene_to_file("res://scenes/End.tscn")

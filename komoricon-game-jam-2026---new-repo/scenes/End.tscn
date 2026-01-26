@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8ev41bqbs7ge"]
+
+[ext_resource type="Texture2D" uid="uid://cdnyq8eh61lgo" path="res://assets/black screen.png" id="1_805va"]
+[ext_resource type="SpriteFrames" uid="uid://b73yo5mv73so" path="res://animations/cat_animation.tres" id="2_uehg5"]
+[ext_resource type="AudioStream" uid="uid://cxl2cxs5uhbcy" path="res://music/Main menu.ogg" id="3_uehg5"]
+
+[node name="End" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_805va")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(327, 255)
+scale = Vector2(8, 8)
+sprite_frames = ExtResource("2_uehg5")
+autoplay = "default"
+frame_progress = 0.7150222
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AnimatedSprite2D"]
+offset_left = -29.875002
+offset_top = 20.125
+offset_right = 270.125
+offset_bottom = 940.125
+scale = Vector2(0.2, 0.2)
+text = "Thank you for playing! Cat is supposed to fight the dog and grab a toy car in the toy box. The game is still in development (oof!) but we hope you like the demo."
+fit_content = true
+
+[node name="MainMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_uehg5")
+volume_db = -20.0
+autoplay = true

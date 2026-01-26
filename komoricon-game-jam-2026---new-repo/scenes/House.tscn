@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://doml6vh81ikw"]
+[gd_scene load_steps=17 format=4 uid="uid://doml6vh81ikw"]
 
 [ext_resource type="PackedScene" uid="uid://scl87x5fxssp" path="res://scenes/Cat.tscn" id="1_bfmfj"]
 [ext_resource type="Script" uid="uid://ckleod0s0gkie" path="res://scripts/House.gd" id="1_ispqn"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://b3jvctlfh7l8i" path="res://themes/fonts/fonts/poco/Poco.ttf" id="5_etd6b"]
 [ext_resource type="AudioStream" uid="uid://dulartb7cr85v" path="res://music/House.ogg" id="6_lr155"]
 [ext_resource type="Texture2D" uid="uid://crjklplfyalfk" path="res://assets/Untitled_Artwork 17.png" id="7_cmj1i"]
+[ext_resource type="Texture2D" uid="uid://cdh66xylmqc5q" path="res://assets/DogIdle.png" id="8_nwrc1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwrc1"]
 
@@ -25,6 +26,24 @@ sources/0 = SubResource("TileSetAtlasSource_r2usd")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lr155"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ea8vi"]
+radius = 12.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjlmf"]
+atlas = ExtResource("8_nwrc1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l6do8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjlmf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="House" type="Node2D"]
 script = ExtResource("1_ispqn")
@@ -141,5 +160,17 @@ offset_top = 10657.0
 offset_right = 668.0
 offset_bottom = 10913.0
 texture = ExtResource("7_cmj1i")
+
+[node name="Dog" type="CharacterBody2D" parent="."]
+position = Vector2(635, 10730)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dog"]
+position = Vector2(-221, 191)
+shape = SubResource("CapsuleShape2D_ea8vi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dog"]
+position = Vector2(-223.99998, 182.99998)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_l6do8")
 
 [connection signal="body_entered" from="Parkour" to="Cat" method="_on_parkour_body_entered"]
