@@ -107,6 +107,7 @@ autowrap_mode = 2
 
 [node name="MainMenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_b2a04")
+volume_db = -20.0
 autoplay = true
 
 [connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]

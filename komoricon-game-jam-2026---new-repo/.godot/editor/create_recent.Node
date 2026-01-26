@@ -1,8 +1,13 @@
 RichTextLabel
+TextureRect
+CollisionShape2D
+Area2D
+PanelContainer
+Button
+TileMapLayer
+CharacterBody2D
 MarginContainer
 HBoxContainer
-TextureRect
 Label
 VBoxContainer
-PanelContainer
 CanvasLayer

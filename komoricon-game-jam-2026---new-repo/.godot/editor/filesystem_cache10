@@ -1,12 +1,14 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1769379297
+::res://::1769391366
 icon.svg::CompressedTexture2D::2046695202096488833::1769372751::1769372751::1::::<><><>0<>0<>3da6e96c367b38aa45cf565fd78927e4<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://animations/::1769376476
-cat_animation.tres::SpriteFrames::137992648864737074::1769376476::0::1::::<><><>0<>0<><>::uid://uqswab360u1g::::res://assets/sprite_sheet.png
+::res://animations/::1769390064
+cat_animation.tres::SpriteFrames::137992648864737074::1769390064::0::1::::<><><>0<>0<><>::uid://uqswab360u1g::::res://assets/sprite_sheet.png
 cat_idle.tres::SpriteFrames::3557627207808183792::1769372751::0::1::::<><><>0<>0<><>::uid://uqswab360u1g::::res://assets/sprite_sheet.png
-::res://assets/::1769377005
+::res://assets/::1769387349
 black screen.png::CompressedTexture2D::5011732329442231462::1769372751::1769372751::1::::<><><>0<>0<>532fcd59383651a81cd2210cfafc455e<>res://.godot/imported/black screen.png-67a59ceee144461dc144fcdf0bfa842e.ctex::
 cat-dialogue.png::CompressedTexture2D::5475720984441410737::1769372751::1769372751::1::::<><><>0<>0<>fe9abdb50a4c37437909ecebbd4172a1<>res://.godot/imported/cat-dialogue.png-097c0fcbdaadce502ed616b334efd7ca.ctex::
+ClawGrab.png::CompressedTexture2D::8173051245952846622::1769387346::1769387346::1::::<><><>0<>0<>f66aeee6932eb1b9a227fd301f8872dd<>res://.godot/imported/ClawGrab.png-98a4f90d188b436a27a4d85b9ae0c479.ctex::
+ClawOpen.png::CompressedTexture2D::8437118342208992752::1769387348::1769387349::1::::<><><>0<>0<>90d2388dc8ecfdf175a32663a72ad4dd<>res://.godot/imported/ClawOpen.png-6de61845c256f20405e0f02ce20f2fed.ctex::
 human-dialogue.png::CompressedTexture2D::3255561032159247133::1769372751::1769372751::1::::<><><>0<>0<>ce192f0e1a71e5f3251d727de82ed6d7<>res://.godot/imported/human-dialogue.png-e1286683724f180c8042b7764728fb0b.ctex::
 IMG_0859.JPG::CompressedTexture2D::8578734405862913318::1769372751::1769372751::1::::<><><>0<>0<>127cabb698caff4bfc80ab6fee27d20f<>res://.godot/imported/IMG_0859.JPG-1e129b7ff59f8485de0eb65a6dc01682.ctex::
 IMG_0863.PNG::CompressedTexture2D::4202878559166736399::1769372751::1769372751::1::::<><><>0<>0<>f1356baac7f58e6ecbb5def29f252229<>res://.godot/imported/IMG_0863.PNG-9e653d2819a1fbc974fd6af3721826a9.ctex::
@@ -29,27 +31,39 @@ Untitled_Artwork 12.png::CompressedTexture2D::5628897069986636394::1769376994::1
 Untitled_Artwork 13.png::CompressedTexture2D::4739739507512153970::1769376994::1769376994::1::::<><><>0<>0<>284ba1e983d5e916eb452624b0147fe3<>res://.godot/imported/Untitled_Artwork 13.png-98e3f620b653d34af0f11ad0969e139d.ctex::
 Untitled_Artwork 14.png::CompressedTexture2D::8302468345701686767::1769376994::1769376994::1::::<><><>0<>0<>5c80eaa060d2c5377722f839eb1a4213<>res://.godot/imported/Untitled_Artwork 14.png-e0e365995db39ba2d1227d2050ae2041.ctex::
 Untitled_Artwork 15.png::CompressedTexture2D::9053163997357581721::1769376994::1769376994::1::::<><><>0<>0<>dd8d7cd4fc7109641991000a6c9bebfd<>res://.godot/imported/Untitled_Artwork 15.png-8941c7a7e8a841712e457db8a3829634.ctex::
-::res://music/::1769379332
+Untitled_Artwork 16.png::CompressedTexture2D::6192440807994788155::1769380862::1769380862::1::::<><><>0<>0<>023183a3b3e8b33a9fba2470f4886584<>res://.godot/imported/Untitled_Artwork 16.png-017e084f24814a7006a8acbb2b87b15d.ctex::
+Untitled_Artwork 17.png::CompressedTexture2D::5985258727782271936::1769386513::1769386513::1::::<><><>0<>0<>63279cf7339381dace09d133e91ba57e<>res://.godot/imported/Untitled_Artwork 17.png-dec5c984318af6a33d12e5a88691a2ac.ctex::
+Untitled_Artwork 18.png::CompressedTexture2D::2930118834738888958::1769386814::1769386814::1::::<><><>0<>0<>921fa9840f205caabcb58c21e315d5ae<>res://.godot/imported/Untitled_Artwork 18.png-a8ee03153e75092b62d39c8b1ba1eb52.ctex::
+::res://music/::1769387465
+261020__vlatkoblazek__small-dog-barking.ogg::AudioStreamOggVorbis::278590213378646061::1769387465::1769387465::1::::<><><>0<>0<>aea3636ea2d2f625d92b914672c34f29<>res://.godot/imported/261020__vlatkoblazek__small-dog-barking.ogg-d2a87d47e9a6edbe3507f08462d8f666.oggvorbisstr::
+Fail.ogg::AudioStreamOggVorbis::1821600515806094883::1769387454::1769387455::1::::<><><>0<>0<>6cd93ba7677208bd8f0aa65a607f6cd1<>res://.godot/imported/Fail.ogg-dd45d0d43127878282e5461da710d1ed.oggvorbisstr::
 House.ogg::AudioStreamOggVorbis::8585778438576762365::1769379318::1769379318::1::::<><><>0<>0<>1a44fd73e2be7e42852db133fa09c744<>res://.godot/imported/House.ogg-8173139e0a675f79a6a0a23f4eb8a3e6.oggvorbisstr::
 Main menu.ogg::AudioStreamOggVorbis::6411537093981707416::1769379332::1769379332::1::::<><><>0<>0<>60da189fd5d49c44884160a3946461a5<>res://.godot/imported/Main menu.ogg-afda5bae969870d95fcb28ea37149e3f.oggvorbisstr::
+Meow.ogg::AudioStreamOggVorbis::3259957306388774637::1769387441::1769387441::1::::<><><>0<>0<>187f7c3e292d39201c248c55a2ee433c<>res://.godot/imported/Meow.ogg-888ac504b9f5916d6c978a6760b9e397.oggvorbisstr::
 Mini games slow.ogg::AudioStreamOggVorbis::6865374695051034501::1769379325::1769379326::1::::<><><>0<>0<>2fb51a648fb94f49e3b244367aec6fe0<>res://.godot/imported/Mini games slow.ogg-159cf4d71ac5df5a0efb49eadd20c703.oggvorbisstr::
 Mini games.ogg::AudioStreamOggVorbis::4533854203436964191::1769379309::1769379302::1::::<><><>0<>0<>863cd9dbdd2fcd83177b3d49522745a2<>res://.godot/imported/Mini games.ogg-536df74db1718bc6bc97d3d14c8451b5.oggvorbisstr::
-::res://scenes/::1769378881
+Victory.ogg::AudioStreamOggVorbis::8954218791839536874::1769387445::1769387445::1::::<><><>0<>0<>f92dbce8b7140f06e6054653879084ce<>res://.godot/imported/Victory.ogg-0abe05c6c708e41961f01ecfac08ee0a.oggvorbisstr::
+::res://scenes/::1769391251
 Cat.tscn::PackedScene::1268256476760371139::1769372751::0::1::::<><><>0<>0<><>::uid://dkc5qghw86ft3::::res://scripts/Cat.gd<>uid://b73yo5mv73so::::res://animations/cat_animation.tres
-House.tscn::PackedScene::240217728145011210::1769378881::0::1::::<><><>0<>0<><>::uid://scl87x5fxssp::::res://scenes/Cat.tscn<>uid://ckleod0s0gkie::::res://scripts/House.gd<>uid://cyypj641bqk2h::::res://assets/IMG_0877.JPG<>uid://bnokdu4wo70xj::::res://assets/transparent.png<>uid://b3jvctlfh7l8i::::res://themes/fonts/fonts/poco/Poco.ttf
+House.tscn::PackedScene::240217728145011210::1769390635::0::1::::<><><>0<>0<><>::uid://scl87x5fxssp::::res://scenes/Cat.tscn<>uid://ckleod0s0gkie::::res://scripts/House.gd<>uid://cyypj641bqk2h::::res://assets/IMG_0877.JPG<>uid://bnokdu4wo70xj::::res://assets/transparent.png<>uid://b3jvctlfh7l8i::::res://themes/fonts/fonts/poco/Poco.ttf<>uid://dulartb7cr85v::::res://music/House.ogg<>uid://crjklplfyalfk::::res://assets/Untitled_Artwork 17.png
+HouseAfterParkour.tscn::PackedScene::6444660561064647808::1769391251::0::1::::<><><>0<>0<><>::uid://cyypj641bqk2h::::res://assets/IMG_0877.JPG<>uid://scl87x5fxssp::::res://scenes/Cat.tscn<>uid://bnokdu4wo70xj::::res://assets/transparent.png<>uid://dulartb7cr85v::::res://music/House.ogg
 Interactable.tscn::PackedScene::4729363560666330202::1769372751::0::1::::<><><>0<>0<><>::
-Intro.tscn::PackedScene::8797153307015627376::1769372751::0::1::::<><><>0<>0<><>::uid://cximk2ad318q8::::res://themes/menu_theme.tres<>uid://b3jvctlfh7l8i::::res://themes/fonts/fonts/poco/Poco.ttf<>uid://d0ss8jnn33sgf::::res://scripts/Intro.gd<>uid://bgfum7l3ldxqe::::res://themes/button.tres<>uid://cdnyq8eh61lgo::::res://assets/black screen.png<>uid://b73yo5mv73so::::res://animations/cat_animation.tres
+Intro.tscn::PackedScene::8797153307015627376::1769384595::0::1::::<><><>0<>0<><>::uid://cximk2ad318q8::::res://themes/menu_theme.tres<>uid://b3jvctlfh7l8i::::res://themes/fonts/fonts/poco/Poco.ttf<>uid://d0ss8jnn33sgf::::res://scripts/Intro.gd<>uid://bgfum7l3ldxqe::::res://themes/button.tres<>uid://cdnyq8eh61lgo::::res://assets/black screen.png<>uid://b73yo5mv73so::::res://animations/cat_animation.tres<>uid://cxl2cxs5uhbcy::::res://music/Main menu.ogg
 Main.tscn::PackedScene::7886711270076073790::1769372751::0::1::::<><><>0<>0<><>::
+Parkour.tscn::PackedScene::1013046016505901084::1769390978::0::1::::<><><>0<>0<><>::uid://scl87x5fxssp::::res://scenes/Cat.tscn<>uid://bflx4iw4cexdh::::res://scripts/CatParkour.gd<>uid://bi4q42ktosd5f::::res://assets/Untitled_Artwork 10.png<>uid://cs1td2d81eq62::::res://assets/Untitled_Artwork 9.png<>uid://d11ypo3mvqcbr::::res://assets/Untitled_Artwork 8.png<>uid://cuhwuii3y17op::::res://assets/Untitled_Artwork 16.png<>uid://dp4dncswnyihn::::res://assets/Untitled_Artwork 4.png<>uid://dybljin1lq6oa::::res://assets/Untitled_Artwork 5.png<>uid://crjklplfyalfk::::res://assets/Untitled_Artwork 17.png<>uid://b5uh6fjjyhtsx::::res://music/Mini games.ogg<>uid://b3jvctlfh7l8i::::res://themes/fonts/fonts/poco/Poco.ttf
+ParkourWin.tscn::PackedScene::1241698056528062003::1769388218::0::1::::<><><>0<>0<><>::uid://bh0mvnivuahpe::::res://assets/Untitled_Artwork 18.png<>uid://b3ost5qa5ekir::::res://scripts/ParkourWin.gd<>uid://b3jvctlfh7l8i::::res://themes/fonts/fonts/poco/Poco.ttf<>uid://dopc7vw22u1ag::::res://assets/ClawGrab.png<>uid://d0tqw7u71dyj7::::res://music/Victory.ogg<>uid://bgfum7l3ldxqe::::res://themes/button.tres
 UI.tscn::PackedScene::5116772053228309041::1769372751::0::1::::<><><>0<>0<><>::uid://dsod67vrim74e::::res://scripts/UI.gd
-::res://scripts/::1769379072
-Cat.gd::GDScript::7867129652451853886::1769372751::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scripts/::1769391290
+Cat.gd::GDScript::7867129652451853886::1769391290::0::1::::<>CharacterBody2D<><>0<>0<><>::
+CatParkour.gd::GDScript::2761521791527773353::1769386156::0::1::::<>CharacterBody2D<><>0<>0<><>::
 GameState.gd::GDScript::9136513169566791085::1769372751::0::1::::<>Node<><>0<>0<><>::
 House.gd::GDScript::5497706025188572412::1769379072::0::1::::<>Node2D<><>0<>0<><>::
 Interactable.gd::GDScript::525818625705341035::1769372751::0::1::::<>Area2D<><>0<>0<><>::
-Intro.gd::GDScript::8952294272093654809::1769375131::0::1::::<>Control<><>0<>0<><>::
+Intro.gd::GDScript::8952294272093654809::1769386156::0::1::::<>Control<><>0<>0<><>::
+ParkourWin.gd::GDScript::4381738030526468169::1769391163::0::1::::<>Node2D<><>0<>0<><>::
 UI.gd::GDScript::8451801749681773982::1769372751::0::1::::<>CanvasLayer<><>0<>0<><>::
-::res://themes/::1769372751
-button.tres::StyleBoxFlat::2819113102700872072::1769372751::0::1::::<><><>0<>0<><>::
+::res://themes/::1769388083
+button.tres::StyleBoxFlat::2819113102700872072::1769388083::0::1::::<><><>0<>0<><>::
 menu_theme.tres::StyleBoxFlat::6404447673250909877::1769372751::0::1::::<><><>0<>0<><>::
 ::res://themes/fonts/::1769372751
 icon.png::CompressedTexture2D::6669618444143786095::1769372751::1769372751::1::::<><><>0<>0<>9fc09fa8f5d196f6399c4788ea180152<>res://.godot/imported/icon.png-d17f3b8bd244d20036dfb6dba9483502.ctex::

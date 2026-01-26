@@ -34,7 +34,7 @@ func _run_cinematic() -> void:
 	_set_line("vroom...\nvroom...")
 	await _pause(1.2 + EXTRA_DELAY)
 
-	_set_line("The time is 9:00 AM")
+	_set_line("The time is 9:00 PM")
 	await _pause(1.2 + EXTRA_DELAY)
 
 	_set_line("A car is speeding down an unknown road,\nwith no goal to stop.")
