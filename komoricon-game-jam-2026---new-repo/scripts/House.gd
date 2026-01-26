@@ -3,10 +3,10 @@ extends Node2D
 
 @onready var dialogue_layer: CanvasLayer = $DialogueLayer
 
-@onready var portrait: TextureRect = $DialogueLayer/DialoguePanel/Portrait
-@onready var speaker_label: Label = $DialogueLayer/DialoguePanel/MarginContainer/VBoxContainer/SpeakerLabel
-@onready var dialogue_label: RichTextLabel = $DialogueLayer/DialoguePanel/MarginContainer/VBoxContainer/DialogueLabel
-@onready var hint_label: Label = $DialogueLayer/DialoguePanel/MarginContainer/VBoxContainer/HintLabel
+@onready var portrait: TextureRect = $DialogueLayer/DialogueRoot/DialoguePanel/Portrait
+@onready var speaker_label: Label = $DialogueLayer/DialogueRoot/DialoguePanel/SpeakerLabel
+@onready var dialogue_label: RichTextLabel = $DialogueLayer/DialogueRoot/DialoguePanel/DialogueLabel
+@onready var hint_label: Label = $DialogueLayer/DialogueRoot/DialoguePanel/HintLabel
 
 const CAT_PORTRAIT: Texture2D = preload("res://assets/cat-dialogue.png")
 const OWNER_PORTRAIT: Texture2D = preload("res://assets/human-dialogue.png")
@@ -15,8 +15,10 @@ var lines := [
 	{"speaker": "Cat", "text": "I must warn my owner!"},
 	{"speaker": "Cat", "text": "*cat runs up to owner*"},
 	{"speaker": "Cat", "text": "Meowwww, Meow Meow Meowww"},
-	{"speaker": "Owner", "text": "Does she want something?\nDo you need something?"},
-	{"speaker": "Cat", "text": "He can't understand me, I'll have to find another way to stop him..."}
+	{"speaker": "Owner", "text": "Does she want something?"},
+	{"speaker": "Owner", "text": "Does you need something?"},
+	{"speaker": "Cat", "text": ".. .He can't understand me"},
+	{"speaker": "Cat", "text": "I'll have to find another way to stop him"}
 ]
 
 var idx: int = 0
