@@ -36,4 +36,15 @@ func _on_parkour_body_entered(body: Node2D) -> void:
 
 func _on_fight_body_entered(body: Node2D) -> void:
 	if body == self:
-		get_tree().change_scene_to_file("res://scenes/End.tscn")
+		get_tree().change_scene_to_file("res://scenes/Fight.tscn")
+		
+		
+
+func _on_dog_area_body_entered(body: Node2D) -> void:
+	if body == self:
+		get_tree().change_scene_to_file("res://scenes/DogLose.tscn")
+
+
+func _on_dog_win_body_entered(body: Node2D) -> void:
+	if body == self:
+		get_tree().change_scene_to_file("res://scenes/DogWin.tscn")

@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://cx23vair71a13"]
+[gd_scene load_steps=10 format=4 uid="uid://cx23vair71a13"]
 
 [ext_resource type="Texture2D" uid="uid://cyypj641bqk2h" path="res://assets/IMG_0877.JPG" id="2_lay8v"]
 [ext_resource type="PackedScene" uid="uid://scl87x5fxssp" path="res://scenes/Cat.tscn" id="3_7cu4e"]
 [ext_resource type="Texture2D" uid="uid://bnokdu4wo70xj" path="res://assets/transparent.png" id="4_cej7d"]
-[ext_resource type="Texture2D" uid="uid://cdh66xylmqc5q" path="res://assets/DogIdle.png" id="5_dru5d"]
+[ext_resource type="PackedScene" uid="uid://kejbl1q0ii2p" path="res://scenes/Dog.tscn" id="5_dru5d"]
 [ext_resource type="AudioStream" uid="uid://dulartb7cr85v" path="res://music/House.ogg" id="6_wiedp"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bfmfj"]
@@ -19,25 +19,7 @@ tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_r2usd")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ervfa"]
-radius = 12.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kjlmf"]
-atlas = ExtResource("5_dru5d")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_tj3t0"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kjlmf")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lay8v"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dru5d"]
 
 [node name="House" type="Node2D"]
 
@@ -47,7 +29,7 @@ scale = Vector2(1.2617188, 1.2617188)
 texture = ExtResource("2_lay8v")
 
 [node name="Cat" parent="." instance=ExtResource("3_7cu4e")]
-position = Vector2(475, 10803)
+position = Vector2(617, 10724)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(515, 10805)
@@ -69,22 +51,14 @@ stream = ExtResource("6_wiedp")
 volume_db = -20.0
 autoplay = true
 
-[node name="Dog" type="CharacterBody2D" parent="."]
-position = Vector2(635, 10730)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dog"]
-position = Vector2(-221, 191)
-shape = SubResource("CapsuleShape2D_ervfa")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dog"]
-position = Vector2(-223.99998, 182.99998)
-scale = Vector2(0.8, 0.8)
-sprite_frames = SubResource("SpriteFrames_tj3t0")
+[node name="Dog" parent="." instance=ExtResource("5_dru5d")]
+position = Vector2(425, 10918)
 
 [node name="Fight" type="Area2D" parent="Dog"]
+position = Vector2(9, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dog/Fight"]
-position = Vector2(-217, 191)
-shape = SubResource("CapsuleShape2D_lay8v")
+position = Vector2(-3, 0)
+shape = SubResource("CapsuleShape2D_dru5d")
 
 [connection signal="body_entered" from="Dog/Fight" to="Cat" method="_on_fight_body_entered"]

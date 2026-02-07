@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://kejbl1q0ii2p"]
+
+[ext_resource type="Texture2D" uid="uid://cdh66xylmqc5q" path="res://assets/DogIdle.png" id="1_ae7rm"]
+[ext_resource type="Texture2D" uid="uid://ddemkfen2jg2k" path="res://assets/DogWalk1-4/DogWalk1.png" id="2_4y65u"]
+[ext_resource type="Texture2D" uid="uid://efu38sdu1t17" path="res://assets/DogWalk1-4/DogWalk2.png" id="3_ambve"]
+[ext_resource type="Texture2D" uid="uid://cm10nguh1blhl" path="res://assets/DogWalk1-4/DogWalk3.png" id="4_hkda6"]
+[ext_resource type="Texture2D" uid="uid://bl1jw86bjbh1h" path="res://assets/DogWalk1-4/DogWalk4.png" id="5_o6gin"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ervfa"]
+radius = 12.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjlmf"]
+atlas = ExtResource("1_ae7rm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpacs"]
+atlas = ExtResource("2_4y65u")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sctwb"]
+atlas = ExtResource("3_ambve")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_moyrv"]
+atlas = ExtResource("4_hkda6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pi24"]
+atlas = ExtResource("5_o6gin")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tj3t0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjlmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpacs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sctwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_moyrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pi24")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dog" type="CharacterBody2D"]
+position = Vector2(41, 33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.40000916, 2.6000214)
+shape = SubResource("CapsuleShape2D_ervfa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3.4000092, -5.3999786)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_tj3t0")
+frame = 1
+frame_progress = 0.85763735

@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0o5y8dj87ih2"]
+
+[ext_resource type="Script" uid="uid://b2pxlajt6kopg" path="res://scripts/DogWin.gd" id="1_nw2yt"]
+[ext_resource type="Texture2D" uid="uid://bfieexnlkjjk8" path="res://assets/Untitled_Artwork.jpg" id="2_nw2yt"]
+[ext_resource type="FontFile" uid="uid://b3jvctlfh7l8i" path="res://themes/fonts/fonts/poco/Poco.ttf" id="3_64uep"]
+[ext_resource type="AudioStream" uid="uid://d0tqw7u71dyj7" path="res://music/Victory.ogg" id="5_htp5p"]
+[ext_resource type="StyleBox" uid="uid://bgfum7l3ldxqe" path="res://themes/button.tres" id="6_0tb4u"]
+
+[sub_resource type="Theme" id="Theme_uhkoq"]
+Button/fonts/font = ExtResource("3_64uep")
+
+[node name="DogWin" type="Node2D"]
+script = ExtResource("1_nw2yt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(515, 10805)
+zoom = Vector2(2.5, 2.5)
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D"]
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("2_nw2yt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D/TextureRect"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 160.0
+offset_right = 227.0
+offset_bottom = 240.0
+theme_override_fonts/normal_font = ExtResource("3_64uep")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center] Got the Car!![/center]"
+fit_content = true
+
+[node name="Victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_htp5p")
+volume_db = -20.0
+autoplay = true
+
+[node name="Return" type="Button" parent="."]
+offset_left = 491.0
+offset_top = 10885.0
+offset_right = 537.0
+offset_bottom = 10925.0
+theme = SubResource("Theme_uhkoq")
+theme_override_styles/normal = ExtResource("6_0tb4u")
+theme_override_styles/pressed = ExtResource("6_0tb4u")
+theme_override_styles/hover = ExtResource("6_0tb4u")
+text = "Exit"
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

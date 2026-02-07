@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8r721xnjshru"
-path="res://.godot/imported/Untitled_Artwork 13.png-98e3f620b653d34af0f11ad0969e139d.ctex"
+uid="uid://cgb8je8tq2ch7"
+path="res://.godot/imported/ToyBoxScene.png-35acb7d0c9cc8ecbe7242deebda414cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Untitled_Artwork 13.png"
-dest_files=["res://.godot/imported/Untitled_Artwork 13.png-98e3f620b653d34af0f11ad0969e139d.ctex"]
+source_file="res://assets/ToyBoxScene.png"
+dest_files=["res://.godot/imported/ToyBoxScene.png-35acb7d0c9cc8ecbe7242deebda414cd.ctex"]
 
 [params]
 
